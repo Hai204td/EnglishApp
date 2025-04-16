@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- PHẦN HEADER -->
+        <!-- Nút back (icon) và tiêu đề bài đọc được chọn -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingBottom="12dp">
+
+            <!-- Icon quay lại -->
+            <ImageView
+                android:id="@+id/btnBack"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_back"
+                android:contentDescription="Back" />
+
+            <!-- Tiêu đề bài đọc được chọn -->
+            <!-- DỮ LIỆU ĐƯỢC TRUYỀN TỪ MÀN DANH SÁCH BÀI ĐỌC (Ví dụ: Bài đọc số 1) -->
+            <TextView
+                android:id="@+id/tvReadingTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:text="Bài đọc số 1"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#000000" />
+        </LinearLayout>
+
+        <!-- NỘI DUNG BÀI ĐỌC -->
+        <!-- Dữ liệu này được lấy từ DB dựa vào ID của bài đọc người dùng chọn -->
+        <TextView
+            android:id="@+id/tvReadingContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nội dung bài đọc sẽ được hiển thị ở đây từ DB..."
+            android:textSize="16sp"
+            android:textColor="#333333"
+            android:lineSpacingExtra="6dp"
+            android:paddingBottom="24dp" />
+
+        <!-- SỐ CÂU HỎI HIỆN TẠI -->
+        <!-- Text này sẽ thay đổi theo từng câu. Ví dụ: Câu 1, Câu 2,... -->
+        <TextView
+            android:id="@+id/tvQuestionNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Câu 1"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:paddingBottom="4dp" />
+
+        <!-- CÂU HỎI -->
+        <!-- Nội dung câu hỏi hiện tại được lấy từ danh sách các câu hỏi trong DB -->
+        <TextView
+            android:id="@+id/tvQuestionContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nội dung câu hỏi sẽ được hiển thị từ DB..."
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:paddingBottom="8dp" />
+
+        <!-- CÁC ĐÁP ÁN (A, B, C, D) -->
+        <!-- Các radio button sẽ được thay đổi nội dung tuỳ theo câu hỏi hiện tại -->
+        <RadioGroup
+            android:id="@+id/rgAnswers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="24dp">
+
+            <RadioButton
+                android:id="@+id/rbAnswer1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Đáp án A" />
+
+            <RadioButton
+                android:id="@+id/rbAnswer2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Đáp án B" />
+
+            <RadioButton
+                android:id="@+id/rbAnswer3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Đáp án C" />
+
+            <RadioButton
+                android:id="@+id/rbAnswer4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Đáp án D" />
+        </RadioGroup>
+
+        <!-- CÁC NÚT ĐIỀU HƯỚNG CÂU HỎI -->
+        <!-- Logic xử lý như sau:
+             - Nếu đang ở câu đầu: ẩn "Câu trước"
+             - Nếu đang ở câu cuối: ẩn "Câu sau"
+             - Luôn hiện "Nộp bài" -->
+        <LinearLayout
+            android:id="@+id/navigationButtons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end">
+
+            <!-- Nút "Câu trước" - chỉ hiển thị nếu đang ở câu thứ 2 trở đi -->
+            <Button
+                android:id="@+id/btnPrevious"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Câu trước"
+                android:visibility="gone"
+                android:layout_marginEnd="8dp" />
+
+            <!-- Nút "Câu sau" - ẩn nếu là câu cuối -->
+            <Button
+                android:id="@+id/btnNext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Câu sau"
+                android:layout_marginEnd="8dp" />
+
+            <!-- Nút "Nộp bài" - luôn hiển thị -->
+            <Button
+                android:id="@+id/btnSubmit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nộp bài" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

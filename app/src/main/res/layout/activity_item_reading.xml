@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  File layout đại diện cho 1 item trong danh sách các bài đọc.
+  Mỗi item là 1 CardView, hiển thị ví dụ: "Bài đọc số 1", "Bài đọc số 2",...
+  Khi người dùng nhấn vào, sẽ điều hướng sang màn hình chi tiết bài đọc (ReadingDetailActivity).
+-->
+
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    android:layout_marginHorizontal="4dp"
+    card_view:cardCornerRadius="12dp"
+    card_view:cardElevation="4dp"
+    android:clickable="true"
+    android:foreground="?android:attr/selectableItemBackground">
+
+
+    <!--
+      TextView hiển thị tiêu đề bài đọc: "Bài đọc số 1", "Bài đọc số 2",...
+      -> Nội dung sẽ được set bằng code (adapter) dựa trên dữ liệu từ DB/API.
+         Ví dụ: tvReadingTitle.setText("Bài đọc số " + reading.getId());
+
+      -> Định dạng khung sử dụng nền trắng, viền đen, bo góc (từ drawable: customer_edittext.xml).
+         Đảm bảo hiển thị đồng bộ với UI tổng thể của app.
+    -->
+
+    <TextView
+        android:id="@+id/tvReadingTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/customer_edittext"
+        android:padding="16dp"
+        android:text="Bài đọc số 1"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+</androidx.cardview.widget.CardView>

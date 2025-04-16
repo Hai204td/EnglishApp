@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#FFFFFF">
+
+    <!-- PHẦN GIỚI THIỆU NGẮN -->
+    <!-- Gồm ảnh minh hoạ + nội dung giới thiệu -->
+
+    <!-- Icon quay lại -->
+    <ImageView
+        android:id="@+id/btnBack"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_back"
+        android:contentDescription="Back" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="213dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+
+        <!-- Hình ảnh biểu tượng: con cú -->
+        <ImageView
+            android:id="@+id/imgOwl"
+            android:layout_width="163dp"
+            android:layout_height="155dp"
+            android:layout_marginEnd="12dp"
+            android:contentDescription="Owl Icon"
+            android:src="@drawable/owl_image" />
+
+        <!-- Text giới thiệu ngắn -->
+        <TextView
+            android:id="@+id/tvIntro"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Rèn luyện kỹ năng đọc từ các bài tập dưới đây!"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- DANH SÁCH BÀI ĐỌC -->
+    <!-- RecyclerView để hiển thị danh sách bài đọc.
+         - Mỗi item là một bài đọc (VD: Bài đọc 1, Bài đọc 2, ...)
+         - Dữ liệu được lấy từ DB (danh sách các bài đọc user có thể chọn)
+         - Khi user chọn 1 bài: chuyển sang màn `reading_detail`, truyền theo ID bài đọc đó -->
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvReadingList"
+        android:layout_width="match_parent"
+        android:layout_height="412dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:scrollbars="vertical" />
+
+</LinearLayout>

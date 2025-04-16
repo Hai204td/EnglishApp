@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Màn hình kết quả bài đọc: hiển thị sau khi người dùng nộp bài thành công.
+  - Gồm phần lời chúc, điểm số, đáp án chi tiết.
+  - Nút "Tiếp tục" quay về màn hình danh sách bài đọc.
+  - Logic luồng:
+    1. Người dùng nộp bài → Client gửi kết quả bài làm lên backend.
+    2. Backend tính điểm, trả về số câu đúng và chi tiết đáp án.
+    3. Client nhận điểm và đáp án, hiển thị:
+       - Lời chúc (ví dụ: "Bạn đã làm bài rất tốt!").
+       - Điểm (ví dụ: "Điểm: 8/10").
+       - Danh sách chi tiết các đáp án (hiển thị qua RecyclerView).
+    4. Người dùng bấm "Tiếp tục" → Quay về trang danh sách bài đọc (`reading_list`).
+-->
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- 🦉 Cú + Lời chúc -->
+
+        <!-- 📊 Hiển thị điểm số -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="243dp"
+            android:layout_marginBottom="24dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <!-- Icon con cú -->
+            <ImageView
+                android:id="@+id/imgResultOwl"
+                android:layout_width="161dp"
+                android:layout_height="143dp"
+                android:layout_marginEnd="16dp"
+                android:contentDescription="Owl Icon"
+                android:src="@drawable/owl_image" />
+
+            <!-- Lời khen -->
+            <TextView
+                android:id="@+id/tvCongratulation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bạn đã làm bài rất tốt!"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvScore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Điểm: 8/10"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#1E88E5"
+            android:gravity="center"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 📋 Danh sách đáp án chi tiết -->
+        <TextView
+            android:id="@+id/tvAnswerDetailsLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Đáp án chi tiết:"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_marginBottom="8dp" />
+
+        <!-- RecyclerView để hiển thị đáp án từng câu -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvAnswerDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp" />
+
+        <!-- 🔘 Button quay lại -->
+        <Button
+            android:id="@+id/btnContinue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tiếp tục"
+            android:backgroundTint="#4CAF50"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:padding="12dp" />
+    </LinearLayout>
+</ScrollView>

@@ -8,15 +8,6 @@
     android:padding="24dp"
     android:background="#FFFFFF">
 
-    <!-- Layout chứa hình và dòng chữ ngang hàng -->
-
-    <!-- Ô nhập email -->
-
-    <!-- Ô nhập mật khẩu -->
-
-    <!-- Nút đăng nhập -->
-
-    <!-- Dòng chuyển sang đăng ký -->
 
     <LinearLayout
         android:id="@+id/topSection"
