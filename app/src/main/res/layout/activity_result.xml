@@ -11,6 +11,9 @@
        - Điểm (ví dụ: "Điểm: 8/10").
        - Danh sách chi tiết các đáp án (hiển thị qua RecyclerView).
     4. Người dùng bấm "Tiếp tục" → Quay về trang danh sách bài đọc (`reading_list`).
+
+
+    ÁP DỤNG TƯƠNG TỰ CHO TRẢ RA KẾT QUẢ BÀI NGHE
 -->
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
