@@ -19,6 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "ENGLISH5"
+rootProject.name = "FlashCardApp"
 include(":app")
- 
