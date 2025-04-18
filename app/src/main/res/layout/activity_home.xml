@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#FFFFFF">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="24dp">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/owl"
+            android:contentDescription="Owl" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Xin chào, Linda, lựa chọn nội dung học"
+            android:textSize="16sp"
+            android:layout_marginStart="12dp"
+            android:textColor="#000000" />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btnVocabulary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TỪ VỰNG"
+
+        android:drawablePadding="10dp"
+        android:backgroundTint="#2196F3"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="12dp" />
+
+    <Button
+        android:id="@+id/btnReading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="KỸ NĂNG ĐỌC"
+
+        android:drawablePadding="10dp"
+        android:backgroundTint="#2196F3"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="12dp" />
+
+    <Button
+        android:id="@+id/btnListening"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="KỸ NĂNG NGHE"
+
+        android:drawablePadding="10dp"
+        android:backgroundTint="#2196F3"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="12dp" />
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="32dp"
+        app:menu="@menu/bottom_nav_menu"
+        app:itemIconTint="@color/selector_nav_color"
+        app:itemTextColor="@color/selector_nav_color" />
+</LinearLayout>

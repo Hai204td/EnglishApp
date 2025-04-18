@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📊 Tiến trình học tập"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="12dp"/>
+
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="1,2,3"
+            android:background="@android:color/darker_gray"
+            android:padding="4dp">
+
+            <TableRow>
+                <TextView android:text="📖 Từ đã học" android:padding="8dp"/>
+                <TextView android:text="✅ Bài hoàn thành" android:padding="8dp"/>
+                <TextView android:text="📅 Ngày học liên tục" android:padding="8dp"/>
+            </TableRow>
+            <TableRow>
+                <TextView android:text="120" android:padding="8dp"/>
+                <TextView android:text="8" android:padding="8dp"/>
+                <TextView android:text="6" android:padding="8dp"/>
+            </TableRow>
+        </TableLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Biểu đồ đo lường mức độ hoàn thành bài học"
+            android:gravity="center"
+            android:background="#D3F5D3"
+            android:padding="10dp"
+            android:layout_marginTop="16dp"
+            android:textStyle="bold"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/circle_vocab"
+                android:gravity="center"
+                android:text="15%\nTừ vựng"
+                android:textSize="12sp"
+                android:textColor="#FFFFFF"/>
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/circle_read"
+                android:gravity="center"
+                android:text="15%\nKỹ năng đọc"
+                android:textSize="12sp"
+                android:textColor="#FFFFFF"
+                android:layout_marginStart="16dp"/>
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/circle_listen"
+                android:gravity="center"
+                android:text="12%\nKỹ năng nghe"
+                android:textSize="12sp"
+                android:textColor="#FFFFFF"
+                android:layout_marginStart="16dp"/>
+        </LinearLayout>
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lịch sử điểm trắc nghiệm"
+            android:textStyle="bold"
+            android:paddingTop="16dp"
+            android:paddingBottom="8dp"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F8EFE6"
+                android:padding="12dp"
+                android:orientation="vertical"
+                android:layout_marginBottom="12dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginHorizontal="4dp"
+                android:backgroundTintMode="src_in"
+                android:clipToOutline="true"
+                android:elevation="2dp"
+                android:layout_margin="6dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bài học: Kỹ năng đọc - Bài đọc số 1"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ngày làm: 14-04-2025"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Điểm: 9/10"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/black" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F8EFE6"
+                android:padding="12dp"
+                android:orientation="vertical"
+                android:layout_marginBottom="12dp"
+                android:layout_marginHorizontal="4dp"
+                android:clipToOutline="true"
+                android:elevation="2dp"
+                android:layout_margin="6dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bài học: Kỹ năng nghe - Bài nghe số 1"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ngày làm: 14-04-2025"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Điểm: 10/10"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/black" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
