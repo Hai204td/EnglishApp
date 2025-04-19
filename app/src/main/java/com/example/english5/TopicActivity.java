@@ -1,9 +1,10 @@
-package com.example.flashcardapp;
+package com.example.english5;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast; //
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,9 +15,12 @@ public class TopicActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_topic);
+        ImageView btnBack = findViewById(R.id.btnBack);
+        btnBack.setOnClickListener(v -> finish());
+
 
         Button btnAnimal = findViewById(R.id.btnAnimal);
-        Button btnFamily = findViewById(R.id.unit2Card);  // Chỉ gọi 1 lần thôi
+        Button btnFamily = findViewById(R.id.unit2Card);
         Button btnFood = findViewById(R.id.btnFood);
 
         btnAnimal.setOnClickListener(v -> {

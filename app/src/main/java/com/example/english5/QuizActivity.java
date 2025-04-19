@@ -1,4 +1,4 @@
-package com.example.flashcardapp;
+package com.example.english5;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,6 +18,9 @@ public class QuizActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
+        ImageView btnBack = findViewById(R.id.btnBack);
+        btnBack.setOnClickListener(v -> finish());
+
 
         RadioGroup answerGroup = findViewById(R.id.answerGroup);
         RadioButton answerA = findViewById(R.id.answerA);
