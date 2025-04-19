@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         TextView wordCard = findViewById(R.id.wordCard);
-        TextView quizLink = findViewById(R.id.quizLink); // 👉 thêm dòng này để tìm view
+        TextView quizLink = findViewById(R.id.quizLink);
 
         final boolean[] isFront = {true};
 

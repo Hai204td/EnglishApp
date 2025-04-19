@@ -10,8 +10,8 @@
 
     <ImageView
         android:id="@+id/owlImage"
-        android:layout_width="230dp"
-        android:layout_height="242dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginTop="68dp"
         android:contentDescription="Hình con cú"
         android:src="@drawable/owl_image"
